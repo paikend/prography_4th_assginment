@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+    <form action="" method="post">
+        <div class="alert alert-info">로그아웃 성공.</div>
+        <a href="{% url 'login' %}" class="btn btn-primary">Move to Login</a>
+    </form>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+{% endblock %}

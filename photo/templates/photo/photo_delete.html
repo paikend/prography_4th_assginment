@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+    <form action="" method="post" enctype="multipart/form-data">
+    <div class="alert alert-danger"> Do you wanner delete {{object}}?</div>
+        {% csrf_token %}
+        <input type="submit" value="Delete OK" class="btn btn-success">
+    </form>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+{% endblock %}
