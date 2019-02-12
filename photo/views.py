@@ -1,9 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, resolve_url
 # Create your views here.
 #클래스형 :
 #보통 제네릭 뷰를 상속받아서 쓰기 위해서
-#제네릭 뷰를 사용하는 이유는 >
+#제네릭 뷰를 사용하는 이유는
 #많이 사용하는 기능을 미리 구현했기때문에
 from django.urls import reverse
 
@@ -19,7 +19,7 @@ class PhotoList(ListView):
     template_name = 'photo/photo_list.html'
 
 
-class PhotoCreate(LoginRequiredMixin,CreateView):
+class PhotoCreate(LoginRequiredMixin, CreateView):
     model = Photo
     fields = ['image', 'text']
     template_name = 'photo/photo_create.html'
@@ -27,11 +27,13 @@ class PhotoCreate(LoginRequiredMixin,CreateView):
     def form_valid(self, form):
         form.instance.writer_id = self.request.user.id
         if form.is_valid():
-
             form.instance.save()
-            return redirect(reverse('photo:/photo/photo_detail.html'))
+            pk = Photo.objects.first()
+            return redirect('photo:photo_detail', pk.id)
         else:
             return self.render_to_response({'form':form})
+
+
 
 
 class PhotoUpdate(LoginRequiredMixin, UpdateView):

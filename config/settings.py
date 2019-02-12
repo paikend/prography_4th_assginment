@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o31m%th_&y^a8#5!=y05kcwcl6$xxxy@wmewviy%hub)_$_8%c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,10 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photo',
     'accounts',
+    'disqus',
+    'django.contrib.sites',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -82,6 +86,9 @@ DATABASES = {
     }
 }
 
+DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+
+#배보상태로 디버그모드를 바꿈
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -121,9 +128,12 @@ USE_TZ = True
 # 가상 URL : 실제 파일 폴더 경로를 노출시키지 않기 위해서
 MEDIA_URL = '/media/'
 #서비스 중간에 바꿔도된다
-
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_REDIRECT_URL = '/'
+
+DISQUS_WEBSITE_SHORTNAME = 'dstargram11'
+SITE_ID = 1

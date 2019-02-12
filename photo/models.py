@@ -26,3 +26,4 @@ class Photo(models.Model):
 
     def __str__(self):
         return self.writer.username+ " " + self.created.strftime("%Y-%m-%d %H:%M:%S")
+

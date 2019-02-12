@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="alert alert-info">회원가입에 성공했습니다 . {{new_user.username}}님</div>
+        <a href="{% url 'login' %}" class="btn btn-primary"> 로그인으로 이동</a>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+{% endblock %}
