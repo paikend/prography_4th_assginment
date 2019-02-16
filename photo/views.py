@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, resolve_url
 # Create your views here.
 #클래스형 :
@@ -6,7 +7,9 @@ from django.shortcuts import render, redirect, resolve_url
 #제네릭 뷰를 사용하는 이유는
 #많이 사용하는 기능을 미리 구현했기때문에
 from django.urls import reverse
-
+from django.views.generic import TemplateView
+from tagging.models import Tag, TaggedItem
+from tagging.views import TaggedObjectList
 from .models import *
 from django.shortcuts import render
 from django.views.generic.list import ListView
@@ -46,6 +49,12 @@ class PhotoDelete(LoginRequiredMixin, DeleteView):
     model = Photo
     template_name = 'photo/photo_delete.html'
     success_url = '/'
+
+    def get(self, request, *arg, **kwargs):
+        object = self.get_object()
+        if object.writer != request.user:
+            return HttpResponseRedirect(object.get_absolute_url())
+        return super(PhotoDelete, self.get(request,  *arg, **kwargs))
 
 
 class PhotoDetail(DetailView):

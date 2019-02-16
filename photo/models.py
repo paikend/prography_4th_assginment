@@ -8,13 +8,14 @@ from django.contrib.auth import get_user_model
 
 # Create your models here.
 from django.urls import reverse_lazy
+from tagging.fields import TagField
 
 
 class Photo(models.Model):
     writer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     text = models.TextField(blank=True)
     image =  models.ImageField(upload_to='images/%y/%m/%d/')
-
+    tag = TagField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

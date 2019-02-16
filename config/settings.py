@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'disqus',
     'django.contrib.sites',
+    'tagging.apps.TaggingConfig',
+
 
 ]
 
@@ -78,15 +80,30 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-import dj_database_url
+# import dj_database_url
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+#
+# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
+import pymysql
+pymysql.install_as_MySQLdb()
+
+#파이 마이에스큐엘 호환모드
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'onlineshop',
+        'USER': 'paik',
+        'PASSWORD': 'paik1201',
+        'HOST': 'onlineshop11.cskayzhojmka.ap-northeast-2.rds.amazonaws.com',
+        'PORT': '3306',
+
     }
 }
-
-DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 
 #배보상태로 디버그모드를 바꿈
 
@@ -125,15 +142,36 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-# 가상 URL : 실제 파일 폴더 경로를 노출시키지 않기 위해서
-MEDIA_URL = '/media/'
-#서비스 중간에 바꿔도된다
+# 가상 URL : 실제 파일 폴더 경로를 노출시키지 않기 위해서jji
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-LOGIN_REDIRECT_URL = '/'
+AWS_ACCESS_KEY_ID = 'AKIAJU6BLHZ7HDMBCSGA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_REGION = 'ap-northeast-2'
+AWS_STORAGE_BUCKET_NAME = 'onlineshop11'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME,AWS_REGION)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_DEFAULT_ACL = 'public-read'
+AWS_LOCATION = 'static'
+
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR,'static')
+# ]
+DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
+
+# MEDIA_URL = '/media/'
+# #서비스 중간에 바꿔도된다
+# STATIC_URL = '/static/'
+#
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# LOGIN_REDIRECT_URL = '/'
 
 DISQUS_WEBSITE_SHORTNAME = 'dstargram11'
 SITE_ID = 1
