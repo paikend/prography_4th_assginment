@@ -172,7 +172,7 @@ DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
 
 DISQUS_WEBSITE_SHORTNAME = 'dstargram11'
 SITE_ID = 1
