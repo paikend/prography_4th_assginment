@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,12 +269,12 @@
       <workItem from="1549799389014" duration="8036000" />
       <workItem from="1550351962481" duration="117000" />
       <workItem from="1550352116235" duration="123000" />
-      <workItem from="1550352544730" duration="1509000" />
+      <workItem from="1550352544730" duration="1766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30311000" />
+    <option name="totallyTimeSpent" value="30568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'disqus',
     'django.contrib.sites',
     'tagging.apps.TaggingConfig',
+    'storages',
 
 
 ]
