@@ -50,11 +50,11 @@ class PhotoDelete(LoginRequiredMixin, DeleteView):
     template_name = 'photo/photo_delete.html'
     success_url = '/'
 
-    def get(self, request, *arg, **kwargs):
-        object = self.get_object()
-        if object.writer != request.user:
-            return HttpResponseRedirect(object.get_absolute_url())
-        return super(PhotoDelete, self.get(request,  *arg, **kwargs))
+    # def get(self, request, *arg, **kwargs):
+    #     object = self.get_object()
+    #     if object.writer != request.user:
+    #         return HttpResponseRedirect(object.get_absolute_url())
+    #     return super(PhotoDelete, self.get(request,  *arg, **kwargs))
 
 
 class PhotoDetail(DetailView):
