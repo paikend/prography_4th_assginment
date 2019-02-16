@@ -81,31 +81,31 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-# import dj_database_url
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-#
-# DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
-import pymysql
-pymysql.install_as_MySQLdb()
-
-#파이 마이에스큐엘 호환모드
+import dj_database_url
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'onlineshop',
-        'USER': 'paik',
-        'PASSWORD': 'paik1201',
-        'HOST': 'onlineshop11.cskayzhojmka.ap-northeast-2.rds.amazonaws.com',
-        'PORT': '3306',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+
+# import pymysql
+# pymysql.install_as_MySQLdb()
+#
+# #파이 마이에스큐엘 호환모드
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'onlineshop',
+#         'USER': 'paik',
+#         'PASSWORD': 'paik1201',
+#         'HOST': 'onlineshop11.cskayzhojmka.ap-northeast-2.rds.amazonaws.com',
+#         'PORT': '3306',
+#
+#     }
+# }
+DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 #배보상태로 디버그모드를 바꿈
 
 # Password validation
