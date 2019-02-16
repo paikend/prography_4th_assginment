@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-71">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="-1044">
+              <caret line="84" selection-start-line="84" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -286,16 +284,15 @@
       <workItem from="1549799389014" duration="8036000" />
       <workItem from="1550351962481" duration="117000" />
       <workItem from="1550352116235" duration="123000" />
-      <workItem from="1550352544730" duration="4546000" />
+      <workItem from="1550352544730" duration="4794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33348000" />
+    <option name="totallyTimeSpent" value="33596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -539,8 +536,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="-1044">
+          <caret line="84" selection-start-line="84" selection-end-line="90" />
         </state>
       </provider>
     </entry>
