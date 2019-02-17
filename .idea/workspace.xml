@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="298">
+              <caret line="148" lean-forward="true" selection-end-line="148" />
             </state>
           </provider>
         </entry>
@@ -357,12 +357,12 @@
       <workItem from="1550352116235" duration="123000" />
       <workItem from="1550352544730" duration="6209000" />
       <workItem from="1550428907843" duration="1925000" />
-      <workItem from="1550432418953" duration="4222000" />
+      <workItem from="1550432418953" duration="4311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41158000" />
+    <option name="totallyTimeSpent" value="41247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="794" extended-state="0" />
@@ -381,8 +381,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.32188842" side_tool="true" visible="true" weight="0.46581197" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.6781116" visible="true" weight="0.46581197" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32188842" side_tool="true" visible="true" weight="0.46581197" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.6781116" visible="true" weight="0.46581197" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49928468" weight="0.32905984" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -655,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="298">
+          <caret line="148" lean-forward="true" selection-end-line="148" />
         </state>
       </provider>
     </entry>
