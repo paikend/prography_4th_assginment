@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dstargram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prography-4th-django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/photo/templates/photo/photo_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/templates/photo/photo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/photo/templates/photo/photo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/photo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="529819cd-61fe-48ea-86a0-829c42ceb7a1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,16 +394,15 @@
       <workItem from="1550352116235" duration="123000" />
       <workItem from="1550352544730" duration="6209000" />
       <workItem from="1550428907843" duration="1925000" />
-      <workItem from="1550432418953" duration="3290000" />
+      <workItem from="1550432418953" duration="3477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40226000" />
+    <option name="totallyTimeSpent" value="40413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="794" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
