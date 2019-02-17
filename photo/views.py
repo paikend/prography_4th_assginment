@@ -20,7 +20,7 @@ from django.views.generic.detail import DetailView
 class PhotoList(ListView):
     model = Photo
     template_name = 'photo/photo_list.html'
-
+    paginate_by = 5
 
 class PhotoCreate(LoginRequiredMixin, CreateView):
     model = Photo

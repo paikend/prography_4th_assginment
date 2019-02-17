@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o31m%th_&y^a8#5!=y05kcwcl6$xxxy@wmewviy%hub)_$_8%c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,9 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 import dj_database_url
 DATABASES = {
     'default': {
@@ -90,26 +87,8 @@ DATABASES = {
 }
 
 
-# import pymysql
-# pymysql.install_as_MySQLdb()
-#
-# #파이 마이에스큐엘 호환모드
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'onlineshop',
-#         'USER': 'paik',
-#         'PASSWORD': 'paik1201',
-#         'HOST': 'onlineshop11.cskayzhojmka.ap-northeast-2.rds.amazonaws.com',
-#         'PORT': '3306',
-#
-#     }
-# }
 DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 #배보상태로 디버그모드를 바꿈
-
-# Password validation
-# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -160,19 +139,10 @@ AWS_LOCATION = 'static'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR,'static')
-# ]
 DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
 
-# MEDIA_URL = '/media/'
-# #서비스 중간에 바꿔도된다
-# STATIC_URL = '/static/'
-#
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 LOGIN_REDIRECT_URL = '/'
 
-DISQUS_WEBSITE_SHORTNAME = 'dstargram11'
+DISQUS_WEBSITE_SHORTNAME = 'prography_4th_django_paik625'
 SITE_ID = 1

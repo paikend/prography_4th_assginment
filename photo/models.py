@@ -14,7 +14,7 @@ from tagging.fields import TagField
 class Photo(models.Model):
     writer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     text = models.TextField(blank=True)
-    image =  models.ImageField(upload_to='images/%y/%m/%d/')
+    image =  models.ImageField(upload_to='images/%y/%m/%d/', blank=True )
     tag = TagField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
