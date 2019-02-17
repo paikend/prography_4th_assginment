@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'disqus',
     'django.contrib.sites',
     'tagging.apps.TaggingConfig',
+    'storages'
 
 
 ]
@@ -143,5 +144,5 @@ DEFAULT_FILE_STORAGE = 'config.asset_storage.MediaStorage'
 
 LOGIN_REDIRECT_URL = '/'
 
-DISQUS_WEBSITE_SHORTNAME = 'prography_4th_django_paik625'
+DISQUS_WEBSITE_SHORTNAME = 'dstargram11'
 SITE_ID = 1

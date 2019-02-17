@@ -6,7 +6,7 @@ from .views import *
 app_name = 'photo'
 
 urlpatterns = [
-    path('', PhotoList.as_view(), name='index'),
+    path('', PhotoList.as_view(), name='photo_list'),
     path('create/', PhotoCreate.as_view(), name='photo_create'),
     path('detail/<int:pk>/', PhotoDetail.as_view(), name='photo_detail'),
     path('update/<int:pk>/', PhotoUpdate.as_view(), name='photo_update'),

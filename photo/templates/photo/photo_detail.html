@@ -6,14 +6,17 @@
     <div class="col-3"></div>
     <div class="col-6">
       <div class="card">
+        {% if object.image %}
       <img src="{{object.image.url}}" class="card-img-top" >
+        {% endif %}
       <div class="card-body">
         <h5 class="card-title">        {{object.writer.username}}</h5><br>
         <p class="card-text"> {{object.text}}<br>
         {{object.updated}}</p>
+        {% ifequal object.writer.username  user.username%}
           <a href="{% url 'photo:photo_delete' object.id %}" class="btn btn-sm btn-danger">삭제하기</a>
           <a href="{% url 'photo:photo_update' object.id %}" class="btn btn-sm btn-warning">수정하기</a>
-
+        {% endifequal %}
      </div>
     </div>
     </div>
